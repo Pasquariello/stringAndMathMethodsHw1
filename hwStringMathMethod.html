@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>HomeWork</title>
+
+    <style>
+        .inputBox {
+            width: 50px;
+        }
+        
+        #answer {
+            border: 1px solid black;
+            width: 250px;
+            margin: 20px;
+            height: 15px;
+            padding: 10px;
+        }
+        
+        .calculator {
+            border: 1px solid black;
+            width: 315px;
+            height: 200px;
+        }
+        
+        .innerStuff {
+            margin-top: 15px;
+            margin-left: 10px;
+            margin-right: 10px;
+            ;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="show">
+        <h1>Basic Calculator</h1>
+        <div class="calculator">
+            <label class="innerStuff">Input 1</label>
+            <input class="inputBox innerStuff" id="entry1" />
+
+            <label class="innerStuff">Input 2</label>
+
+            <input class="inputBox innerStuff" id="entry2" />
+            <br/>
+            <button class="innerStuff" id="additionB" onclick="addButton()">add</button>
+            <button class="innerStuff" onclick="subtractButton()">subtract</button>
+            <button class="innerStuff" onclick="multiplyButton()">multiply</button>
+            <button class="innerStuff" onclick="divideButton()">divide</button>
+
+
+            <div class="innerStuff" id="answer"></div>
+
+        </div>
+    </div>
+
+
+    <script>
+        var probs = "How can I determine how many letters a string contains?";
+
+        init();
+
+        function init() {
+            getLength("Voilà! In view, a humble vaudevillian veteran, cast vicariously as both victim and villain by the vicissitudes of Fate. This visage, no mere veneer of vanity, is a vestige of the vox populi, now vacant, vanished. However, this valorous visitation of a by-gone vexation, stands vivified and has vowed to vanquish these venal and virulent vermin vanguarding vice and vouchsafing the violently vicious and voracious violation of volition.");
+
+
+        }
+
+
+
+
+        //find the length of a string
+
+        function getLength(string) {
+            console.log(string.length);
+
+        }
+
+        //get a string in a string           
+        getString("Excuse me. Thank you all for coming. I'm Donald Sinclair, I own this hotel. We don't have much time. There's a meteor the size of North Carolina heading straight for Earth. The impact is going to kill every thing and everyone on this planet. I built a bunker in the basement to this casino strong enough to withstand the blast. There's room enough for eight people. I have chosen the seven of you, plus me. When this is over, it'll be up to us to repopulate and re-civilize the planet.");
+
+        function getString(string) {
+            console.log(string.slice(11, 76));
+
+        }
+
+
+        //specify whether a string ends with a specified set of characters
+        findLast();
+
+        function findLast() {
+            console.log(probs.endsWith('contains?'));
+
+        }
+
+        //check if a string includes a partiular set of characters
+        checkincluded();
+
+        function checkincluded() {
+            console.log(probs.includes("Monster Truck"));
+
+
+        }
+
+        //compare 2 strings
+        compareStrings("hello", "goodbye");
+
+        function compareStrings(string1, string2) {
+            if (string1 == string2) {
+                console.log(true);
+            } else {
+                console.log(false);
+            }
+
+        }
+
+        //checing if a string begins with a specified set of characters
+        checkStart();
+
+        function checkStart() {
+            console.log(probs.startsWith('How'));
+
+
+
+        }
+
+        //convert a string to uppercase letters
+        biggieSize();
+
+        function biggieSize() {
+            console.log(probs.toUpperCase());
+
+
+        }
+
+
+        //convert first letter to upper case
+        upperfirst("taylor was here and it was awesome");
+
+        function upperfirst(string) {
+            console.log(string.charAt(0).toUpperCase() + string.slice(1));
+
+        }
+
+
+
+        findLength("hello World");
+
+        function findLength(string) {
+            console.log(string.length);
+
+        }
+
+        //trim the white space around a string
+        trimWhiteSpace("    Hello     ");
+
+        function trimWhiteSpace(string) {
+            console.log(string.trim());
+
+
+
+        }
+
+
+        //double Checking if its actually the code or just how its consoling on itself anyways kind of like in HTML it only registers one space inside a tag
+
+
+        console.log("Start of Math Methods");
+
+
+
+
+
+
+        //math hw
+
+
+        //random number
+        randomNumGen();
+
+        function randomNumGen() {
+            console.log(Math.ceil(Math.random() * 10));
+
+
+        }
+        var myArray = [1, 2, 7, 3]
+
+
+        //find min and max of a list of numbers in an argument
+        findMin(myArray);
+
+        function findMin(myArray) {
+            var min = Math.min.apply(null, myArray);
+
+
+            console.log("i made it");
+            console.log(min);
+
+
+        }
+        findMax(myArray);
+
+        function findMax(myArray) {
+            var min = Math.max.apply(null, myArray);
+
+
+            console.log("i made it");
+            console.log(min);
+
+
+        }
+
+        //round to nearest integer
+        roundToNearestInteger(8.4);
+
+        function roundToNearestInteger(numB) {
+            console.log(Math.round(numB));
+
+        }
+
+        //round a number down to the nearest integer
+        roundDown(99.99999999999);
+
+        function roundDown(numB) {
+            console.log(Math.floor(numB));
+
+        }
+
+        //add 3 numbers together
+        addThree(3, 5, 9);
+
+        function addThree(a, b, c) {
+            console.log(a + b + c);
+
+        }
+
+
+        //add 2 numbers then divide by 7
+        AddTwoDivideBySeven(47, 2);
+
+        function AddTwoDivideBySeven(a, b) {
+            console.log((a + b) / 7);
+
+        }
+
+        //change string into integer
+        changeToInt('10');
+
+        function changeToInt(string) {
+            console.log(parseInt(string));
+
+        }
+
+        //convert string to float
+        changeToFloat('4.8');
+
+        function changeToFloat(string) {
+            console.log(parseFloat(string));
+
+        }
+
+        //increase by 1
+        increment(4)
+        var n = 0;
+
+        function increment() {
+
+            n++;
+            console.log(n);
+        }
+
+
+        //build a simple calculator
+        function addButton(string) {
+
+            var y = parseInt(document.getElementById("entry1").value);
+
+            var z = parseInt(document.getElementById("entry2").value);
+
+            document.getElementById('answer').innerHTML = (y + z);
+
+        }
+
+        function subtractButton(string) {
+
+            var y = parseInt(document.getElementById("entry1").value);
+
+            var z = parseInt(document.getElementById("entry2").value);
+
+            document.getElementById('answer').innerHTML = (y - z);
+
+        }
+
+        function multiplyButton(string) {
+
+            var y = parseInt(document.getElementById("entry1").value);
+
+            var z = parseInt(document.getElementById("entry2").value);
+
+            document.getElementById('answer').innerHTML = (y * z);
+
+        }
+
+        function divideButton(string) {
+
+            var y = parseInt(document.getElementById("entry1").value);
+
+            var z = parseInt(document.getElementById("entry2").value);
+
+            document.getElementById('answer').innerHTML = (y / z);
+
+
+        }
+    </script>
+
+</body>
+
+
+</html>
